@@ -1,4 +1,4 @@
-var { parse } = require('../dist/nomnoml.js')
+var { parse } = require('../dist/donuth.js')
 var { test } = require('node:test')
 var { readdirSync, readFileSync, existsSync, lstatSync } = require('node:fs')
 

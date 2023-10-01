@@ -1,4 +1,4 @@
-var { parse, ParseError } = require('../dist/nomnoml.js')
+var { parse, ParseError } = require('../dist/donuth.js')
 var { test } = require('node:test')
 var { deepEqual, assert } = require('./assert.js')
 var { part, node } = require('./utils.js')

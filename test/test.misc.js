@@ -4,14 +4,14 @@ var {
   processAsyncImports,
   ImportDepthError,
   renderSvg,
-} = require('../dist/nomnoml.js')
+} = require('../dist/donuth.js')
 var { test } = require('node:test')
 var { assert } = require('./assert.js')
 var { join } = require('node:path')
 
 test('assert library version', function () {
   var fs = require('fs')
-  var library = require('../dist/nomnoml.js')
+  var library = require('../dist/donuth.js')
   var package = require('../package.json')
   var lockfile = require('../package-lock.json')
   var changelog = fs.readFileSync(join(__dirname, '../changelog.md'), { encoding: 'utf-8' })
@@ -166,10 +166,10 @@ test('processAsyncImports resolves deep imports', async function () {
 test('processAsyncImports via file system', async function () {
   var fs = require('fs')
   var output = await processAsyncImports(
-    fs.readFileSync(join(__dirname, 'import-test.nomnoml'), 'utf-8'),
+    fs.readFileSync(join(__dirname, 'import-test.donuth'), 'utf-8'),
     (key) => fs.promises.readFile('test/' + key, 'utf-8')
   )
-  fs.writeFileSync(join(__dirname, 'output.async.nomnoml'), output)
+  fs.writeFileSync(join(__dirname, 'output.async.donuth'), output)
 })
 
 test('escape [data-name] attribute value in SVG', function () {
@@ -177,7 +177,7 @@ test('escape [data-name] attribute value in SVG', function () {
   assert(output, 'includes', 'data-name="&amp;"')
 })
 
-test('SVG export includes nomnoml source in <desc>', function () {
+test('SVG export includes donuth source in <desc>', function () {
   var output = renderSvg('[a]->[b]')
   var desc = output.match('<desc ?>(.*)</desc>')[1]
   assert(desc.trim(), '=', '[a]-&gt;[b]')

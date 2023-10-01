@@ -1,5 +1,5 @@
 {
-  "name": "nomnoml",
+  "name": "donuth",
   "version": "1.6.2",
   "description": "The sassy UML renderer that generates diagrams from text",
   "homepage": "http://www.nomnoml.com",
@@ -8,14 +8,14 @@
   "keywords": [
     "uml"
   ],
-  "main": "dist/nomnoml.js",
+  "main": "dist/donuth.js",
   "files": [
     "index.d.ts",
-    "dist/nomnoml.js",
-    "dist/nomnoml-cli.js",
+    "dist/donuth.js",
+    "dist/donuth-cli.js",
     "dist/webapp.js",
     "index.html",
-    "nomnoml.css",
+    "donuth.css",
     "favicon.png",
     "img/interaction-tutorial.svg",
     "codemirror/solarized.nomnoml.css",
@@ -48,7 +48,7 @@
     "webapp": "rollup -c webapp/rollup.config.js",
     "lib": "rollup -c src/rollup.config.js && npm test",
     "test": "node --test && npm run test_cli",
-    "test_cli": "rm -f test/output.svg && node dist/nomnoml-cli.js test/import-test.nomnoml test/output.svg"
+    "test_cli": "rm -f test/output.svg && node dist/donuth-cli.js test/import-test.donuth test/output.svg"
   },
   "repository": {
     "type": "git",

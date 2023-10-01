@@ -42,7 +42,6 @@ export var styles: { [key: string]: Style } = {
   input:       buildStyle({ visual:'input' }, { center:true }),
   instance:    buildStyle({ visual:'class' }, { center:true, underline:true }),
   label:       buildStyle({ visual:'none' }, { center:true }),
-  lollipop:    buildStyle({ visual:'lollipop' }, { center:true }),
   note:        buildStyle({ visual:'note' }, {}),
   pipe:        buildStyle({ visual:'pipe' }, { center:true, bold: true }),
   package:     buildStyle({ visual:'package' }, {}),
@@ -183,7 +182,6 @@ export var layouters: { [key in Visual]: NodeLayouter } = {
     clas.height = 1
   },
   input: box,
-  lollipop: labelledIcon,
   none: box,
   note: box,
   package: box,
@@ -361,9 +359,6 @@ export var visualizers: { [key in Visual]: Visualizer } = {
       { x: x + node.width - config.padding, y: y + node.height },
       { x: x, y: y + node.height },
     ]).fillAndStroke()
-  },
-  lollipop: function (node, x, y, config, g) {
-    g.circle({ x: node.x, y: y + node.height / 2 }, node.height / 2.5).fillAndStroke()
   },
   none: function (node, x, y, config, g) {},
   note: function (node, x, y, config, g) {

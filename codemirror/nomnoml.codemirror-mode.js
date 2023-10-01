@@ -1,4 +1,4 @@
-CodeMirror.defineMode('nomnoml', () => ({
+CodeMirror.defineMode('donuth', () => ({
   startState() {
     return {}
   },

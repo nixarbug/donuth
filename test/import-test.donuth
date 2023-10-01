@@ -1,4 +1,4 @@
-#import: importee.nomnoml
+#import: importee.donuth
 [Pirate|
   [a]--[b]
   [a]-:>[c]

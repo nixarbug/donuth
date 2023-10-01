@@ -50,7 +50,6 @@ export type Visual =
   | 'frame'
   | 'hidden'
   | 'input'
-  | 'lollipop'
   | 'none'
   | 'note'
   | 'package'

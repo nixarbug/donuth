@@ -6,9 +6,9 @@ import ignore from 'rollup-plugin-ignore'
 export default {
   input: 'src/index.ts',
   output: {
-    file: 'dist/nomnoml.js',
+    file: 'dist/donuth.js',
     format: 'umd',
-    name: 'nomnoml',
+    name: 'donuth',
     globals: { graphre: 'graphre' },
   },
   external: ['graphre'],

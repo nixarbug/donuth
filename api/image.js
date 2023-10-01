@@ -1,6 +1,6 @@
-const nomnoml = require('../dist/nomnoml');
+const donuth = require('../dist/donuth');
 
-const badInput = nomnoml.renderSvg('bad input')
+const badInput = donuth.renderSvg('bad input')
 
 module.exports = function (req, res) {
   res.writeHead(200, {'Content-Type': 'image/svg+xml'})
@@ -9,7 +9,7 @@ module.exports = function (req, res) {
     if (!input) throw new Error()
     var source = decodeURIComponent(input)
     console.log('rendering: ' + source)
-    res.end(nomnoml.renderSvg(source))
+    res.end(donuth.renderSvg(source))
   }
   catch (e) {
     res.end(badInput)

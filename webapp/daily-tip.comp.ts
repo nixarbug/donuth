@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { a, div, span, prevent } from "./react-util"
 // @ts-ignore
-import * as nomnoml from "../dist/nomnoml.js"
+import * as nomnoml from "../dist/donuth.js"
 
 type DailyTipProps = { id: string, sticky?: boolean, children: any }
 export function DailyTip({ id, sticky, children }: DailyTipProps) {

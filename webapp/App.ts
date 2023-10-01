@@ -6,7 +6,7 @@ import { HoverMarker } from "./HoverMarker"
 import { Observable } from "./Observable"
 import { throttle, debounce, unescapeHtml } from "./util"
 // @ts-ignore
-import * as nomnomlNext from "../dist/nomnoml.js"
+import * as nomnomlNext from "../dist/donuth.js"
 import * as nomnomlLegacy from "nomnoml"
 
 export class App {

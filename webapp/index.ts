@@ -7,11 +7,11 @@ import { Menu } from "./Menu"
 import { el } from "./react-util"
 import { unescapeHtml } from "./util"
 // @ts-ignore
-import * as nomnoml from "../dist/nomnoml.js"
+import * as donuth from "../dist/donuth.js"
 import { ParserConfig } from './ParserConfig'
 
 // @ts-ignore
-export * as nomnoml from "../dist/nomnoml.js"
+export * as nomnoml from "../dist/donuth.js"
 export { DailyTip, NomnomlGraph } from './daily-tip.comp'
 export { App } from "./App"
 

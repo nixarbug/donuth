@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 var fs = require('fs')
-var nomnoml = require('./nomnoml.js')
+var nomnoml = require('./donuth.js')
 
 var [_, _, filename, outfile] = process.argv
 
